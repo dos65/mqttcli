@@ -9,6 +9,11 @@ then
     INSTALL_DIRECTORY="${HOME}/bin"
 fi
 
+if [ ! -d $INSTALL_DIRECTORY ]
+then
+  mkdir -p $INSTALL_DIRECTORY
+fi
+
 downloadJSON() {
     url="$2"
 
